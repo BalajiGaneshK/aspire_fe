@@ -1,0 +1,73 @@
+//Menu variables
+$menu-bg-color: #0c365a;
+
+//Logo Description variables
+$logo-description-font-color: #ffffff;
+$logo-description-font-opacity: 30%;
+$logo-description-font-family: "Open Sans";
+$logo-description-font-size: 15px;
+
+//Menu item variables
+$menu-name-font-color: #ffffff;
+$menu-name-font-family: "Open Sans";
+$menu-name-font-size: 16px;
+
+.menu {
+  width: 340px;
+  height: 770px;
+
+  background-color: $menu-bg-color;
+
+  .logo-container {
+    padding-top: 48px;
+    padding-left: 48px;
+    padding-right: 55px;
+  }
+  .logo {
+    padding-right: 167px;
+    width: 125px;
+    height: 35px;
+  }
+  .logo-description {
+    padding-top: 19px;
+    padding-bottom: 81px;
+    padding-left: 0;
+    width: 237px;
+    height: 40px;
+    text-align: left;
+    color: $logo-description-font-color;
+    opacity: $logo-description-font-opacity;
+    font-family: $logo-description-font-family;
+    font-size: $logo-description-font-size;
+    font-weight: 400;
+  }
+
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 48px;
+
+    li {
+      //padding: 10px 0;
+      cursor: pointer;
+
+      &:hover {
+        //background-color: #555;
+      }
+    }
+    .menu-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .menu-name {
+      margin-left: 16px;
+      margin-bottom: 62px;
+      height: 24px;
+      font-family: $menu-name-font-family;
+      color: $menu-name-font-color;
+      font-size: $menu-name-font-size;
+      font-weight: 400;
+    }
+  }
+}

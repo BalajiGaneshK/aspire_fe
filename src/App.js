@@ -1,10 +1,12 @@
 import './App.scss';
+import Menu from './Menu/Menu';
+import ContentPage from './ContentPage';
 
 function App() {
   return (
     <div className="App">
       <Menu/>
-      <CardsPage/>
+      <ContentPage/>
     </div>
   );
 }
