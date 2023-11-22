@@ -9,6 +9,7 @@ $logo-description-font-size: 15px;
 
 //Menu item variables
 $menu-name-font-color: #ffffff;
+$menu-name-font-color-hover: #01d167;
 $menu-name-font-family: "Open Sans";
 $menu-name-font-size: 16px;
 
@@ -44,16 +45,14 @@ $menu-name-font-size: 16px;
 
   .menu-list {
     list-style: none;
-    padding: 0;
     margin-left: 48px;
+    width: fit-content;
+    padding: 0;
 
     li {
-      //padding: 10px 0;
+      text-align: left;
+      margin-bottom: 62px;
       cursor: pointer;
-
-      &:hover {
-        //background-color: #555;
-      }
     }
     .menu-icon {
       width: 24px;
@@ -62,12 +61,15 @@ $menu-name-font-size: 16px;
 
     .menu-name {
       margin-left: 16px;
-      margin-bottom: 62px;
+      vertical-align: top;
       height: 24px;
       font-family: $menu-name-font-family;
       color: $menu-name-font-color;
       font-size: $menu-name-font-size;
       font-weight: 400;
+      &:hover {
+        color: $menu-name-font-color-hover;
+      }
     }
   }
 }

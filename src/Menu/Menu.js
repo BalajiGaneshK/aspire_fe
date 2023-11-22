@@ -18,7 +18,7 @@ function Menu() {
         </div>
       </div>
 
-      <ul className="menu-list">
+      <div className="menu-list">
         <li>
           <img src={Home_Icon} alt="Home_Icon" className="menu-icon" />
           <span className="menu-name inline">Home</span>
@@ -39,7 +39,7 @@ function Menu() {
           <img src={Settings_Icon} alt="Settings_Icon" className="menu-icon" />
           <span className="menu-name">Settings</span>
         </li>
-      </ul>
+      </div>
     </div>
   );
 }
