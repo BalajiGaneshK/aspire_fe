@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./Menu.scss";
 import AspireLogo from "./Assets/Logo.svg"; // Import the SVG file
 import Card_Icon from "./Assets/Card_Icon.svg"; // Import the SVG file
@@ -10,9 +12,11 @@ function Menu() {
   return (
     <div className="menu">
       <div className="logo-container">
-        <div className="logo">
-          <img src={AspireLogo} alt="Aspire Logo" className="logo" />
-        </div>
+        <Link to={"/"}>
+          <div className="logo">
+            <img src={AspireLogo} alt="Aspire Logo" className="logo" />
+          </div>
+        </Link>
         <div className="logo-description">
           Trusted way of banking for 3000+ SMEs and startups in Singapore
         </div>
@@ -20,24 +24,42 @@ function Menu() {
 
       <div className="menu-list">
         <li>
-          <img src={Home_Icon} alt="Home_Icon" className="menu-icon" />
-          <span className="menu-name inline">Home</span>
+          <Link to={"/"}>
+            <img src={Home_Icon} alt="Home_Icon" className="menu-icon" />
+            <span className="menu-name inline">Home</span>
+          </Link>
         </li>
         <li>
-          <img src={Card_Icon} alt="Card_Icon" className="menu-icon" />
-          <span className="menu-name">Cards</span>
+          <Link to={"/cards"}>
+            <img src={Card_Icon} alt="Card_Icon" className="menu-icon" />
+            <span className="menu-name">Cards</span>
+          </Link>
         </li>
         <li>
-          <img src={Payments_Icon} alt="Payments_Icon" className="menu-icon" />
-          <span className="menu-name">Payments</span>
+          <Link to={"/payment"}>
+            <img
+              src={Payments_Icon}
+              alt="Payments_Icon"
+              className="menu-icon"
+            />
+            <span className="menu-name">Payments</span>
+          </Link>
         </li>
         <li>
-          <img src={Credit_Icon} alt="Credit_Icon" className="menu-icon" />
-          <span className="menu-name">Credit</span>
+          <Link to={"/Credit"}>
+            <img src={Credit_Icon} alt="Credit_Icon" className="menu-icon" />
+            <span className="menu-name">Credit</span>
+          </Link>
         </li>
         <li>
-          <img src={Settings_Icon} alt="Settings_Icon" className="menu-icon" />
-          <span className="menu-name">Settings</span>
+          <Link to={"/settings"}>
+            <img
+              src={Settings_Icon}
+              alt="Settings_Icon"
+              className="menu-icon"
+            />
+            <span className="menu-name">Settings</span>
+          </Link>
         </li>
       </div>
     </div>
