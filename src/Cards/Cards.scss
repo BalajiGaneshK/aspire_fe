@@ -12,6 +12,15 @@ $addcardbutton-fontcolor: #ffffff;
 $addcardbutton-fonthovercolor: #01d167;
 $addcardbutton-fontfamily: "Open Sans";
 
+//cards__dashboard__tabs variables
+$cardsdashboard-tabitem-fontfamily: "Avenir Next";
+$cardsdashboard-tabitem-fontcolor: #222222;
+$cardsdashboard-tabitem-bordercolor: #23cefd;
+
+//cards__dashboard__content variables
+$cardsdashboard-content-boxbordercolor: #fcfcfc;
+$cardsdashboard-content-boxshadowcolor: #00000014;
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -85,6 +94,57 @@ $addcardbutton-fontfamily: "Open Sans";
         &:hover {
           color: $addcardbutton-fonthovercolor;
         }
+      }
+    }
+  }
+
+  .cards__dashboard {
+    display: flex;
+    flex-direction: column;
+    margin-top: 34px;
+    width: 246px;
+    height: 23.5px;
+
+    .cards__dashboard__tabs {
+      display: flex;
+      flex-direction: row;
+
+      .cards__dashboard__tabs__tabitem--selected {
+        margin-right: 32px;
+        color: $cardsdashboard-tabitem-fontcolor;
+        font-family: $cardsdashboard-tabitem-fontfamily;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left;
+        white-space: nowrap;
+        border-bottom: 2px solid;
+        border-color: $cardsdashboard-tabitem-bordercolor;
+        cursor: pointer;
+      }
+      .cards__dashboard__tabs__tabitem--notselected {
+        border: none;
+        margin-right: 32px;
+        color: $cardsdashboard-tabitem-fontcolor;
+        font-family: $cardsdashboard-tabitem-fontfamily;
+        opacity: 30%;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+        white-space: nowrap;
+        cursor: pointer;
+      }
+    }
+    .cards__dashboard__content {
+      width: 906px;
+      height: 767px;
+      margin-top: 16px;
+      border: 1px solid;
+      border-color: $cardsdashboard-content-boxbordercolor;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px $cardsdashboard-content-boxshadowcolor;
+      .cards__dashboard__content__mydebitcards {
+      }
+      .cards__dashboard__content__allcompanycards {
       }
     }
   }
