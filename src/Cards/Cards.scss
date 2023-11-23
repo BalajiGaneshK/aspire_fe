@@ -28,7 +28,6 @@ $cardsdashboard-content-boxshadowcolor: #00000014;
   .cards__cardsheader {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 
     .cards__cardsheader__balance {
       display: flex;
@@ -76,7 +75,7 @@ $cardsdashboard-content-boxshadowcolor: #00000014;
       width: 109px;
       height: 35px;
       margin-top: 26px;
-      margin-right: 60px;
+      margin-left: 678px;
       border-radius: 4px;
       background-color: $addcardbutton-bgcolor;
       color: $addcardbutton-fontcolor;
