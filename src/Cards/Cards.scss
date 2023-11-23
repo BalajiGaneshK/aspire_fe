@@ -1,0 +1,91 @@
+//cards__cardsheader__balance variables
+$cardbalance-fontfamily: "Open Sans";
+$cardbalance-icon-bgcolor: #01d167;
+$cardbalance-icon-fontcolor: #ffffff;
+$cardbalance-icon-fontfamily: "Open Sans";
+$cardbalance-value-fontfamily: "Open Sans";
+$cardbalance-value-fontcolor: #222222;
+
+//cards__cardsheader__addcardbutton variables
+$addcardbutton-bgcolor: #325baf;
+$addcardbutton-fontcolor: #ffffff;
+$addcardbutton-fonthovercolor: #01d167;
+$addcardbutton-fontfamily: "Open Sans";
+
+.cards {
+  display: flex;
+  flex-direction: column;
+
+  .cards__cardsheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .cards__cardsheader__balance {
+      display: flex;
+      flex-direction: column;
+      font-family: $cardbalance-fontfamily;
+      font-weight: 400;
+      text-align: left;
+      font-size: 14px;
+
+      .cards__cardsheader__balance__data {
+        display: flex;
+        flex-direction: row;
+        width: 119px;
+        height: 36px;
+
+        .cards__cardsheader__balance__data__dollaricon {
+          background-color: $cardbalance-icon-bgcolor;
+          font-family: $cardbalance-icon-fontfamily;
+          font-size: 13px;
+          font-weight: bold;
+          color: $cardbalance-icon-fontcolor;
+          width: 40px;
+          height: 24px;
+          margin-top: 16px;
+          border-radius: 4px;
+          text-align: center;
+          vertical-align: middle;
+        }
+        .cards__cardsheader__balance__data__value {
+          width: 67px;
+          height: 36px;
+          color: $cardbalance-value-fontcolor;
+          font-weight: 900;
+          font-size: 26px;
+          margin-left: 12px;
+          margin-top: 9px;
+          //vertical-align: ;
+        }
+      }
+    }
+
+    .cards__cardsheader__addcardbutton {
+      display: flex;
+      flex-direction: row;
+      width: 109px;
+      height: 35px;
+      margin-top: 26px;
+      margin-right: 60px;
+      border-radius: 4px;
+      background-color: $addcardbutton-bgcolor;
+      color: $addcardbutton-fontcolor;
+      font-family: $addcardbutton-fontfamily;
+      font-size: 13px;
+      font-weight: 900;
+      cursor: pointer;
+
+      .cards__cardsheader__addcardbutton__addicon {
+        margin: 8px 8px 8px 10px;
+      }
+      .cards__cardsheader__addcardbutton__buttontext {
+        margin-top: 7px;
+
+        &:hover {
+          color: $addcardbutton-fonthovercolor;
+        }
+      }
+    }
+  }
+}

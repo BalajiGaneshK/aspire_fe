@@ -10,12 +10,10 @@ import Settings from "../src/Settings/Settings.js";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Router>
-        <div className="Menu">
-          <Menu />
-        </div>
-        <div className="Content">
+        <Menu />
+        <div className="content">
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/cards" element={<Cards />} />

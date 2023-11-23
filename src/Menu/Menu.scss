@@ -7,7 +7,7 @@ $logo-description-font-opacity: 30%;
 $logo-description-font-family: "Open Sans";
 $logo-description-font-size: 15px;
 
-//Menu item variables
+//Menu list variables
 $menu-name-font-color: #ffffff;
 $menu-name-font-color-hover: #01d167;
 $menu-name-font-family: "Open Sans";
@@ -16,7 +16,6 @@ $menu-name-font-size: 16px;
 .menu {
   width: 340px;
   height: 770px;
-
   background-color: $menu-bg-color;
 
   .logo-container {

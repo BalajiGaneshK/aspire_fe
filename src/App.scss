@@ -1,4 +1,4 @@
-.App {
+.app {
   text-align: center;
   margin: 20px;
   display: flex;
@@ -8,12 +8,10 @@
   h1 {
     color: #007bff; /* Blue color, you can change it to your preference */
   }
-
-  .Menu {
-    flex: 1;
-  }
-  .Content {
-    flex: 2;
-    width: fit-content;
+  .content {
+    width: 1026px;
+    height: 1053px;
+    margin-left: 60px;
+    margin-top: 59px;
   }
 }
