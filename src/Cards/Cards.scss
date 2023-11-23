@@ -102,12 +102,12 @@ $cardsdashboard-content-boxshadowcolor: #00000014;
     display: flex;
     flex-direction: column;
     margin-top: 34px;
-    width: 246px;
-    height: 23.5px;
 
     .cards__dashboard__tabs {
       display: flex;
       flex-direction: row;
+      width: 246px;
+      height: 23.5px;
 
       .cards__dashboard__tabs__tabitem--selected {
         margin-right: 32px;
@@ -145,6 +145,7 @@ $cardsdashboard-content-boxshadowcolor: #00000014;
       .cards__dashboard__content__mydebitcards {
       }
       .cards__dashboard__content__allcompanycards {
+        color: #007bff;
       }
     }
   }
