@@ -21,6 +21,12 @@ $cardsdashboard-tabitem-bordercolor: #23cefd;
 $cardsdashboard-content-boxbordercolor: #fcfcfc;
 $cardsdashboard-content-boxshadowcolor: #00000014;
 
+//cards__dashboard__content__mydebitcards__leftcontainer__cardsview variables
+$cardsview-fontfamily: "Open Sans";
+$cardsview-showcard-fontcolor: #01d167;
+$cardsview-cardbgcolor: #01d167;
+$cardsview-cardfontcolor: #ffffff;
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -142,6 +148,124 @@ $cardsdashboard-content-boxshadowcolor: #00000014;
       border-radius: 8px;
       box-shadow: 0 2px 12px $cardsdashboard-content-boxshadowcolor;
       .cards__dashboard__content__mydebitcards {
+        display: flex;
+        flex-direction: row;
+        margin-left: 40px;
+        margin-right: 40px;
+        border-right: 1px black dotted;
+
+        .cards__dashboard__content__mydebitcards__leftcontainer {
+          display: flex;
+          margin-top: 31.5px;
+          flex-direction: column;
+          width: 414px;
+          border-right: 1px black dotted;
+          border-left: 1px black dotted;
+
+          .cards__dashboard__content__mydebitcards__leftcontainer__cardsview {
+            display: flex;
+            flex-direction: column;
+            font-family: $cardsview-fontfamily;
+            font-weight: 800;
+            .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__showtextcontainer {
+              display: flex;
+              flex-direction: row;
+              margin-left: 276px;
+              cursor: pointer;
+
+              .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__showtextcontainer__logo {
+                width: 16px;
+                height: 16px;
+              }
+              .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__showtextcontainer__text {
+                font-size: 12px;
+                color: $cardsview-showcard-fontcolor;
+                margin-left: 6px;
+              }
+            }
+            .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer {
+              margin-top: 12px;
+              width: 414px;
+              height: 280px;
+
+              .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel {
+                width: 100%;
+                height: 255.85px;
+                border-radius: 16px;
+                background-color: $cardsview-cardbgcolor;
+                display: flex;
+                flex-direction: column;
+                .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__aspirelogo {
+                  width: 83.52px;
+                  height: 23.7px;
+                  margin-left: 303.39px;
+                  margin-right: 27.09px;
+                  margin-top: 27.09px;
+                }
+                .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__name {
+                  margin-left: 27.09px;
+                  margin-top: 27.29px;
+                  text-align: left;
+                  font-size: 24px;
+                  color: $cardsview-cardfontcolor;
+                  font-weight: 800;
+                  letter-spacing: 0.58px;
+                }
+                .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__cardnumber {
+                  margin-top: 27.22px;
+                  margin-left: 27.09px;
+                  text-align: left;
+                  color: $cardsview-cardfontcolor;
+                  font-size: 16px;
+                  font-weight: 800;
+                  display: flex;
+                  flex-direction: row;
+                  width: 304.74px;
+
+                  .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__cardnumber__fragment {
+                    width: 56.43px;
+                    margin-right: 27.09px;
+                    letter-spacing: 4px;
+                  }
+                }
+                .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__moredetails {
+                  display: flex;
+                  flex-direction: row;
+                  font-size: 13px;
+                  font-weight: 800;
+                  margin-top: 17.02px;
+                  color: $cardsview-cardfontcolor;
+                  .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__moredetails__thru {
+                    margin-left: 27.09px;
+                    letter-spacing: 2px;
+                  }
+                  .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__moredetails__cvv {
+                    margin-left: 36.12px;
+                    letter-spacing: 4px;
+                  }
+                }
+                .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__visalogo {
+                  margin-top: 4.65px;
+                  margin-left: 320.32px;
+                  width: 66.59px;
+                  height: 22.57px;
+                }
+              }
+              .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__indicators {
+                width: 48px;
+                height: 8px;
+                margin-top: 16.15px;
+              }
+            }
+          }
+        }
+        .cards__dashboard__content__mydebitcards__rightcontainer {
+          display: flex;
+          flex-direction: column;
+          width: 366px;
+          margin-left: 46px;
+          margin-top: 60.5px;
+        }
       }
       .cards__dashboard__content__allcompanycards {
         color: #007bff;

@@ -1,6 +1,7 @@
 import { ProgressBar } from "react-loader-spinner";
 
-function Loader(width, height) {
+function Loader(props) {
+  const { width, height } = props;
   return (
     <ProgressBar
       height={height}
