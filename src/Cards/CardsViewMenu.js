@@ -13,9 +13,7 @@ import { cardsSelector } from "./Redux/Selectors";
 function CardsViewMenu() {
   const dispatch = useDispatch();
   let currentCardId = useSelector(cardsSelector.getCurrentCardId);
-  console.log(currentCardId, "is the current card id");
   const handleToggleFreeze = () => {
-    console.log("handleToggleFreeze:",currentCardId);
     dispatch(toggleFreeze(currentCardId));
   };
   return (

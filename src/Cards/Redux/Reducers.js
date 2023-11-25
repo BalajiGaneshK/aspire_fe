@@ -8,7 +8,6 @@ const initialState = {
 const cardsReducer = (state = initialState, action) => {
   switch (action.type) {
     case CARDS_ACTION_TYPES.TOGGLE_FREEZE_CARD:
-      console.log("Toggling freeze for card:", action.payload.cardId);
       return {
         ...state,
         allCards: state.allCards.map((card) =>

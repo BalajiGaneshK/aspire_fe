@@ -43,7 +43,6 @@ function CardsCarousel(props) {
     fetchCardsData(userId);
   }, []);
   const handleCardChange = (index) => {
-    console.log(index, allCards[index]);
     dispatch(setCurrentCardId(allCards[index].id));
   };
   return (
