@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import "./Cards.scss";
 import "slick-carousel/slick/slick.css";
@@ -9,9 +10,13 @@ import Visa_Logo from "../Assets/Cards/Visa-Logo.svg";
 import WhiteDots from "../Components/WhiteDots";
 import { fetchUserCards } from "../MockAPI/GetAllCards";
 import Loader from "../Components/Loader";
+import { setCurrentCardId, storeCardsData } from "./Redux/Actions";
+import { cardsSelector } from "./Redux/Selectors";
+
 function CardsCarousel(props) {
   const [loading, setLoading] = useState(true);
-  const [allCards, setCards] = useState(null);
+  let allCards = useSelector(cardsSelector.getAllCards);
+  const dispatch = useDispatch();
   let { viewCardNumber } = props;
   const userId = "100DXYZ"; //to be fetched from Login
   const carouselSettings = {
@@ -22,23 +27,28 @@ function CardsCarousel(props) {
     slidesToScroll: 1,
     arrows: true,
   };
+  const fetchCardsData = async (userId) => {
+    try {
+      //This is our Mock API
+      const data = await fetchUserCards(userId);
+      //Dispatch action to store API data in redux
+      dispatch(storeCardsData(data));
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
   useEffect(() => {
-    const fetchData = async (userId) => {
-      try {
-        const data = await fetchUserCards(userId);
-        setCards(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData(userId);
+    fetchCardsData(userId);
   }, []);
+  const handleCardChange = (index) => {
+    console.log(index, allCards[index]);
+    dispatch(setCurrentCardId(allCards[index].id));
+  };
   return (
     <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer">
-      <Slider {...carouselSettings}>
+      <Slider {...carouselSettings} afterChange={handleCardChange}>
         {loading ? (
           <Loader width={50} height={50} />
         ) : (
