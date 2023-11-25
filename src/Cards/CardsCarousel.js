@@ -44,7 +44,10 @@ function CardsCarousel(props) {
         ) : (
           allCards.map((card) => {
             return (
-              <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel">
+              <div
+                key={card.id}
+                className="cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel"
+              >
                 <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__aspirelogo">
                   <img src={Aspire_White_Logo} alt="Aspire Logo" />
                 </div>
@@ -55,7 +58,10 @@ function CardsCarousel(props) {
                   {card.cardNumber.split(" ").map((fragment, i = 0) => {
                     ++i;
                     return (
-                      <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__cardnumber__fragment">
+                      <div
+                        key={i}
+                        className="cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__cardnumber__fragment"
+                      >
                         {i === 4 || viewCardNumber === true ? (
                           fragment
                         ) : (
