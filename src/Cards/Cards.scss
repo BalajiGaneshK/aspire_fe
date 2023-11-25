@@ -200,6 +200,7 @@ $cardsviewmenu-bgcolor: #edf3ff;
                 background-color: $cardsview-cardbgcolor;
                 display: flex;
                 flex-direction: column;
+
                 .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__aspirelogo {
                   width: 83.52px;
                   height: 23.7px;
@@ -256,6 +257,10 @@ $cardsviewmenu-bgcolor: #edf3ff;
                   height: 22.57px;
                 }
               }
+              .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel--freeze {
+                opacity: 50%;
+              }
+
               .cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__indicators {
                 width: 48px;
                 height: 8px;

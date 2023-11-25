@@ -46,7 +46,11 @@ function CardsCarousel(props) {
             return (
               <div
                 key={card.id}
-                className="cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel"
+                className={
+                  card.freeze
+                    ? "cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel--freeze"
+                    : "cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel"
+                }
               >
                 <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer__carousel__aspirelogo">
                   <img src={Aspire_White_Logo} alt="Aspire Logo" />

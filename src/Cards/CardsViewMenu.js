@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import "./Cards.scss";
 import Freeze_Card_Icon from "../Assets/Cards/Freeze-Card-Icon.svg";
 import Set_Spend_Limit_Icon from "../Assets/Cards/Set-Spend-Limit-Icon.svg";
@@ -5,6 +7,8 @@ import Gpay_Icon from "../Assets/Cards/GPay-Icon.svg";
 import Replace_Card_Icon from "../Assets/Cards/Replace-Card-Icon.svg";
 import Cancel_Card_Icon from "../Assets/Cards/Cancel-Card-Icon.svg";
 function CardsViewMenu() {
+    const [freezeCard, setCardFreeze]= useState(false);
+    
   return (
     <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu">
       <div
@@ -17,6 +21,7 @@ function CardsViewMenu() {
         <div
           className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem__menuname"
           style={{ marginLeft: "-7px" }}
+          onClick={()=>{}}
         >
           Freeze Card
         </div>
