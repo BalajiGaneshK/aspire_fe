@@ -27,6 +27,11 @@ $cardsview-showcard-fontcolor: #01d167;
 $cardsview-cardbgcolor: #01d167;
 $cardsview-cardfontcolor: #ffffff;
 
+//cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu variables
+$cardsviewmenu-fontfamily: "Open Sans";
+$cardsviewmenu-fontcolor: #0c365a;
+$cardsviewmenu-bgcolor: #edf3ff;
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -255,6 +260,41 @@ $cardsview-cardfontcolor: #ffffff;
                 width: 48px;
                 height: 8px;
                 margin-top: 16.15px;
+              }
+            }
+          }
+
+          .cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu {
+            width: 360px;
+            height: 75px;
+            margin-top: 32px;
+            padding: 20px 27px 21px 27px;
+            border-radius: 16px;
+            background-color: $cardsviewmenu-bgcolor;
+            color: $cardsviewmenu-fontcolor;
+            font-family: $cardsviewmenu-fontfamily;
+            display: flex;
+            flex-direction: row;
+
+            .cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem {
+              display: flex;
+              flex-direction: column;
+              height: 75px;
+              margin-left: 40px;
+              cursor: pointer;
+              .cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem__icon {
+                width: 32px;
+                height: 32px;
+              }
+              .cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem__menuname {
+                height: 36px;
+                margin-top: 7px;
+                font-size: 13px;
+                text-align: center;
+                transition: color 0.3s ease;
+                &:hover {
+                  color: black;
+                }
               }
             }
           }

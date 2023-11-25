@@ -40,9 +40,7 @@ function CardsCarousel(props) {
     <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsview__cardscarouselcontainer">
       <Slider {...carouselSettings}>
         {loading ? (
-          <div style={{marginTop:"20px"}}>
-            <Loader width={50} height={50} />
-          </div>
+          <Loader width={50} height={50} />
         ) : (
           allCards.map((card) => {
             return (
