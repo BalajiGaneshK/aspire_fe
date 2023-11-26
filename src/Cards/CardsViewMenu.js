@@ -50,7 +50,7 @@ function CardsViewMenu() {
           className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem"
           style={{ marginLeft: 0 }}
           onClick={() => {
-            handleToggleFreeze();
+            if (currentCardId !== null) handleToggleFreeze();
           }}
         >
           <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem__icon">
@@ -98,7 +98,9 @@ function CardsViewMenu() {
         </div>
         <div
           className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem"
-          onClick={() => handleCancelCard()}
+          onClick={() => {
+            if (currentCardId !== null) handleCancelCard();
+          }}
         >
           <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem__icon">
             <img src={Cancel_Card_Icon} alt="Freeze_Card_Icon"></img>

@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 import "./Cards.scss";
 import EyeIcon from "../Assets/Cards/Eye-Icon.svg";
 import CardsCarousel from "./CardsCarousel.js";
+import { cardsSelector } from "./Redux/Selectors";
 
 function CardsView() {
   const showCardTextOptions = ["Show Card Number", "Hide Card Number"];
+  const currentCardId = useSelector(cardsSelector.getCurrentCardId);
   const [viewCardNumber, setViewCardNumber] = useState(false);
   const [showCardText, setShowCardText] = useState(showCardTextOptions[0]);
   useEffect(() => {
@@ -17,6 +20,7 @@ function CardsView() {
     <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsview">
       <div
         className="cards__dashboard__content__mydebitcards__leftcontainer__cardsview__showtextcontainer"
+        style={currentCardId === null ? { display: "none" } : {}}
         onClick={() => {
           setViewCardNumber(!viewCardNumber);
         }}
