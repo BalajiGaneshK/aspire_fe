@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import "./Cards.scss";
@@ -7,7 +6,7 @@ import Set_Spend_Limit_Icon from "../Assets/Cards/Set-Spend-Limit-Icon.svg";
 import Gpay_Icon from "../Assets/Cards/GPay-Icon.svg";
 import Replace_Card_Icon from "../Assets/Cards/Replace-Card-Icon.svg";
 import Cancel_Card_Icon from "../Assets/Cards/Cancel-Card-Icon.svg";
-import { toggleFreeze } from "./Redux/Actions";
+import { toggleFreeze, cancelCard } from "./Redux/Actions";
 import { cardsSelector } from "./Redux/Selectors";
 
 function CardsViewMenu() {
@@ -15,6 +14,9 @@ function CardsViewMenu() {
   let currentCardId = useSelector(cardsSelector.getCurrentCardId);
   const handleToggleFreeze = () => {
     dispatch(toggleFreeze(currentCardId));
+  };
+  const handleCancelCard = () => {
+    dispatch(cancelCard(currentCardId));
   };
   return (
     <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu">
@@ -68,7 +70,10 @@ function CardsViewMenu() {
           Replace Card
         </div>
       </div>
-      <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem">
+      <div
+        className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem"
+        onClick={() => handleCancelCard()}
+      >
         <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem__icon">
           <img src={Cancel_Card_Icon} alt="Freeze_Card_Icon"></img>
         </div>

@@ -1,5 +1,3 @@
-import store from "../Redux/Store";
-import { cardsSelector } from "../Cards/Redux/Selectors";
 
 const getUserCards = (userId) => {
   let allCardsMockData = [

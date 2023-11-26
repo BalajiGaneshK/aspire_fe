@@ -27,6 +27,7 @@ function CardsCarousel(props) {
     slidesToScroll: 1,
     arrows: true,
   };
+  console.log("Card Carousel rendered");
   const fetchCardsData = async (userId) => {
     try {
       //This is our Mock API
