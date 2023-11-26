@@ -1,6 +1,6 @@
 import "./Cards.scss";
 import Balance from "./Balance";
-import AddCardButton from "./AddCardButton";
+import AddCardButton from "./AddNewCard";
 
 function CardsHeader() {
   return (

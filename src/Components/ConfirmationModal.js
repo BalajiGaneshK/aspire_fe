@@ -14,12 +14,9 @@ const customStyles = {
     fontFamily: "Open Sans",
   },
 };
-const buttonStyles = {
-  backgroundColor: "#325baf",
-  color: "#ffffff",
-};
 
-const ConfirmationModal = ({ isOpen, message, onRequestClose, action }) => {
+
+const ConfirmationModal = ({ isOpen, message, onRequestClose, action,children }) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -29,6 +26,7 @@ const ConfirmationModal = ({ isOpen, message, onRequestClose, action }) => {
     >
       <div className="confirmationmodal">
         <p>{message}</p>
+        {children}
         <div className="confirmationmodal__buttongroup">
           <div
             className="confirmationmodal__buttongroup__button"

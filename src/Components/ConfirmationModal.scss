@@ -6,6 +6,10 @@ $modalbutton-fontfamily: "Open Sans";
 .confirmationmodal {
   display: flex;
   flex-direction: column;
+  .confirmationmodal__modalform {
+    display: flex;
+    flex-direction: column;
+  }
   .confirmationmodal__buttongroup {
     display: flex;
     flex-direction: row;

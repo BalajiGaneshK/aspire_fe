@@ -17,3 +17,8 @@ export const storeCardsData = (cardData) => ({
   type: CARDS_ACTION_TYPES.STORE_CARDS_DATA,
   payload: { cardData },
 });
+
+export const addNewCard = (cardData) => ({
+  type: CARDS_ACTION_TYPES.ADD_NEW_CARD,
+  payload: { cardData },
+});

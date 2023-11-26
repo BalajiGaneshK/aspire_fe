@@ -5,6 +5,7 @@ import "./Cards.scss";
 import EyeIcon from "../Assets/Cards/Eye-Icon.svg";
 import CardsCarousel from "./CardsCarousel.js";
 import { cardsSelector } from "./Redux/Selectors";
+import ConfirmationModal from "../Components/ConfirmationModal";
 
 function CardsView() {
   const showCardTextOptions = ["Show Card Number", "Hide Card Number"];

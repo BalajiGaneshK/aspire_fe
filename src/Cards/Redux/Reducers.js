@@ -37,6 +37,13 @@ const cardsReducer = (state = initialState, action) => {
         allCards: resultCards,
         currentCardId: resultCards[0]?.id ? resultCards[0].id : null,
       };
+    case CARDS_ACTION_TYPES.ADD_NEW_CARD:
+      const finalCards = [...state.allCards, action.payload.cardData];
+      return {
+        ...state,
+        allCards: finalCards,
+        currentCardId: finalCards[0]?.id ? finalCards[0].id : null,
+      };
     default:
       return state;
   }
