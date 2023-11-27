@@ -32,6 +32,24 @@ $cardsviewmenu-fontfamily: "Open Sans";
 $cardsviewmenu-fontcolor: #0c365a;
 $cardsviewmenu-bgcolor: #edf3ff;
 
+//cards__dashboard__content__mydebitcards__rightcontainer__carddetails variables
+$carddetails-bgcolor: #f5f9ff;
+$carddetails-bordercolor: #f5f5f5;
+$carddetails-shadowcolor: #0000000a;
+$carddetails-fontfamily: "Open Sans";
+$carddetails-fontcolor: #0c365a;
+
+//cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction variables
+$transactiondetails-name-fontcolor: #222222;
+$transactiondetails-date-fontcolor: #aaaaaa;
+$transactiondetails-desc-fontcolor: #325baf;
+$transactiondetails-credit-fontcolor: #01d167;
+$transactiondetails-viewall-fontcolor: #01d167;
+$transactiondetails-viewall-bgcolor: #edfff5;
+$transactiondetails-viewall-bordercolor: #ddffec;
+$transactiondetails-debit-fontcolor: #222222;
+$transactiondetailsfontfamily: "Open Sans";
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -157,15 +175,15 @@ $cardsviewmenu-bgcolor: #edf3ff;
         flex-direction: row;
         margin-left: 40px;
         margin-right: 40px;
-        border-right: 1px black dotted;
+        // border-right: 1px black dotted;
 
         .cards__dashboard__content__mydebitcards__leftcontainer {
           display: flex;
           margin-top: 31.5px;
           flex-direction: column;
           width: 414px;
-          border-right: 1px black dotted;
-          border-left: 1px black dotted;
+          //   border-right: 1px black dotted;
+          //   border-left: 1px black dotted;
 
           .cards__dashboard__content__mydebitcards__leftcontainer__cardsview {
             display: flex;
@@ -310,6 +328,185 @@ $cardsviewmenu-bgcolor: #edf3ff;
           width: 366px;
           margin-left: 46px;
           margin-top: 60.5px;
+          .cards__dashboard__content__mydebitcards__rightcontainer__carddetails {
+            width: 318px;
+            height: 24px;
+            border: 1px $carddetails-bordercolor;
+            border-radius: 8px;
+            background-color: $carddetails-bgcolor;
+            box-shadow: 0 0 8px $carddetails-shadowcolor;
+            padding: 24px;
+            display: flex;
+            flex-direction: row;
+            .cards__dashboard__content__mydebitcards__rightcontainer__carddetails__icon {
+              width: 24px;
+              height: 24px;
+            }
+            .cards__dashboard__content__mydebitcards__rightcontainer__carddetails__text {
+              margin-left: 12px;
+              font-family: $carddetails-fontfamily;
+              color: $carddetails-fontcolor;
+              font-size: 14px;
+              font-weight: 400;
+              text-align: left;
+              white-space: nowrap;
+            }
+            .cards__dashboard__content__mydebitcards__rightcontainer__carddetails__arrow {
+              margin-left: 185px;
+              width: 20px;
+              height: 20px;
+              cursor: pointer;
+            }
+          }
+          .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactions {
+            width: 318px;
+            height: 24px;
+            margin-top: 24px;
+            border: 1px $carddetails-bordercolor;
+            border-radius: 8px;
+            background-color: $carddetails-bgcolor;
+            box-shadow: 0 0 8px $carddetails-shadowcolor;
+            padding: 24px;
+            display: flex;
+            flex-direction: row;
+            .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactions__icon {
+              width: 24px;
+              height: 24px;
+            }
+            .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactions__text {
+              margin-left: 12px;
+              font-family: $carddetails-fontfamily;
+              color: $carddetails-fontcolor;
+              font-size: 14px;
+              font-weight: 400;
+              text-align: left;
+              white-space: nowrap;
+            }
+            .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactions__arrow {
+              margin-left: 134px;
+              width: 20px;
+              height: 20px;
+              cursor: pointer;
+            }
+          }
+          .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist {
+            width: 318px;
+            padding: 24px;
+            margin-top: 0;
+            overflow: hidden;
+            max-height: 498px;
+            border-radius: 8px;
+            border: 1px solid #f0f0f0;
+            border-bottom: none;
+            transition: max-height 0.3s ease-in-out;
+            .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction {
+              width: 100%;
+              height: 76px;
+              padding-bottom: 16px;
+              margin-bottom: 16px;
+              border-bottom: 1px solid $carddetails-bordercolor;
+              display: flex;
+              flex-direction: row;
+              font-family: $transactiondetailsfontfamily;
+              & + & {
+                border-top: 1px solid $carddetails-bordercolor; // Add this line
+              }
+
+              .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__icon {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background-color: #f251951a;
+                .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__icon__innericon {
+                  width: 16px;
+                  height: 15.2px;
+                  margin: 16.4px 16px 16.4px 16px;
+                }
+              }
+              .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__details {
+                display: flex;
+                flex-direction: column;
+                margin-left: 12px;
+                .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__details__name {
+                  color: $transactiondetails-name-fontcolor;
+                  font-weight: 600;
+                  text-align: left;
+                  font-size: 14px;
+                }
+                .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__details__date {
+                  margin-top: 4px;
+                  color: $transactiondetails-date-fontcolor;
+                  font-size: 13px;
+                  text-align: left;
+                }
+                .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__details__description {
+                  margin-top: 14px;
+                  //   margin-bottom: 16px;
+                  color: $transactiondetails-desc-fontcolor;
+                  font-size: 12px;
+                  text-align: left;
+                  font-weight: 600;
+                  display: flex;
+                  width: 156px;
+                  flex-direction: row;
+                  white-space: nowrap;
+                  .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__details__description__icon {
+                    width: 24px;
+                    height: 20px;
+                    border-radius: 10px;
+                    background-color: $transactiondetails-desc-fontcolor;
+                    .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__details__description__icon__innericon {
+                      width: 10px;
+                      height: 7.86px;
+                      margin-top: 1px;
+                      margin-right: 7.12px;
+                      margin-bottom: 6.14px;
+                      margin-left: 6.88px;
+                    }
+                  }
+                  .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__details__description__text {
+                    margin-top: 2px;
+                    margin-left: 8px;
+                  }
+                }
+              }
+
+              .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__value {
+                display: flex;
+                flex-direction: row;
+                width: 72px;
+                height: 19px;
+                margin-left: 50px;
+
+                .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__value__text {
+                  width: 55px;
+                  height: 19px;
+                  font-size: 14px;
+                  font-weight: 800;
+                  color: $transactiondetails-credit-fontcolor;
+                }
+                .cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__value__rightarrow {
+                  width: 6.5px;
+                  height: 19px;
+                  margin-left: 10.5px;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+          .cards__dashboard__content__mydebitcards__rightcontainer__viewalltransactions {
+            width: 366px;
+            height: 50px;
+            // padding: 16px 103px;
+            background-color: $transactiondetails-viewall-bgcolor;
+            color: $transactiondetails-viewall-fontcolor;
+            margin-top: -40px;
+            white-space: nowrap;
+            font-weight: 600;
+            border: 1px solid #ddffec;
+            border-radius: 8px;
+            cursor: pointer;
+          }
         }
       }
       .cards__dashboard__content__allcompanycards {

@@ -1,6 +1,8 @@
 import "./Cards.scss";
 import CardsView from "./CardsView";
 import CardsViewMenu from "./CardsViewMenu";
+import CardDetails from "./CardDetails";
+import RecentTransactions from "./RecentTransactions";
 
 function MyDebitCards() {
   return (
@@ -10,7 +12,8 @@ function MyDebitCards() {
         <CardsViewMenu />
       </div>
       <div className="cards__dashboard__content__mydebitcards__rightcontainer">
-        My Debit Cards Contents-right
+        <CardDetails />
+        <RecentTransactions />
       </div>
     </div>
   );
