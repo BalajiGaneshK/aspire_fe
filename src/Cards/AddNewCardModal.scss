@@ -1,0 +1,71 @@
+$modalvalidationmsg-fontcolor: red;
+$modalheading-fontfamily: "Avenir Next";
+
+$modalbutton-bgcolor: #325baf;
+$modalbutton-fontcolor: #ffffff;
+$modalbutton-fonthovercolor: #01d167;
+$modalbutton-fontfamily: "Open Sans";
+
+.addnewcardmodal {
+  display: flex;
+  flex-direction: column;
+  font-family: $modalbutton-fontfamily;
+  .addnewcardmodal__heading {
+    font-family: $modalheading-fontfamily;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .addnewcardmodal__modalform {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    .addnewcardmodal__modalform__label {
+      font-size: 14px;
+      font-weight: 800;
+      margin-right: 20px;
+    }
+    .addnewcardmodal__modalform__inputfield {
+      margin-top: 5px;
+      font-size: 12px;
+      width: 200px;
+    }
+    .addnewcardmodal__modalform__validationmsg {
+      color: $modalvalidationmsg-fontcolor;
+      font-size: 12px;
+      text-align: left;
+      margin-top: 5px;
+      margin-left: 95px;
+    }
+    .addnewcardmodal__modalform__validationmsg--hidden {
+      visibility: hidden;
+    }
+  }
+
+  .addnewcardmodal__buttongroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-left: 0px;
+    .addnewcardmodal__buttongroup__button {
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 900;
+      height: 35px;
+      padding-left: 10px;
+      padding-right: 10px;
+      cursor: pointer;
+      background-color: $modalbutton-bgcolor;
+      color: $modalbutton-fontcolor;
+      .addnewcardmodal__buttongroup__button__text {
+        margin-top: 7px;
+        text-align: center;
+        &:hover {
+          color: $modalbutton-fonthovercolor;
+        }
+      }
+    }
+  }
+}

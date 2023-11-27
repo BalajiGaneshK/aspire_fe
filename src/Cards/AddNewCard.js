@@ -3,8 +3,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import "./Cards.scss";
-import AddNewCardForm from "./AddNewCardForm";
-import ConfirmationModal from "../Components/ConfirmationModal";
+import AddNewCardModal from "./AddNewCardModal";
 import AddIcon from "../Assets/Cards/Plus-AddNewCard-Button-Icon.svg";
 import { addNewCard } from "./Redux/Actions";
 
@@ -15,11 +14,9 @@ function AddNewCard() {
     message: "Add New Card",
     action: null,
   });
-  const [newCardData, setNewCardData] = useState(null);
-  console.log(newCardData);
-  const generateCardDetails = (data) => {
+  const generateCardDetails = (cardName) => {
     return {
-      name: data.name,
+      name: cardName,
       id: uuidv4(),
       thru: "12/30",
       cardNumber: Math.ceil(Math.random() * 10000000000000000)
@@ -32,16 +29,15 @@ function AddNewCard() {
     setModalSettings({
       isModalOpen: true,
       message: "",
-      action: () => {
+      action: (cardName) => {
         //Generate 16 digit Card Number, thru & cvv details
-        let fullCardDetails = generateCardDetails(newCardData);
+        let fullCardDetails = generateCardDetails(cardName);
         //1.call addNewCard API to persistently store card data to DB.
         //Eg:axios.post('https://aspire.com/addNewCard',{fullCardDetails});
 
         //2.Store the new Card data to Redux store
         //Here we use Redux only as DB so
         dispatch(addNewCard(fullCardDetails));
-        setNewCardData(fullCardDetails);
       },
     });
   };
@@ -58,17 +54,12 @@ function AddNewCard() {
           New Card
         </div>
       </div>
-      <ConfirmationModal
+      <AddNewCardModal
         isOpen={modalSettings.isModalOpen}
         message={modalSettings.message}
         onRequestClose={setModalSettings}
         action={modalSettings.action}
-      >
-        <AddNewCardForm
-          newCardData={newCardData}
-          setNewCardData={setNewCardData}
-        />
-      </ConfirmationModal>
+      />
     </div>
   );
 }
