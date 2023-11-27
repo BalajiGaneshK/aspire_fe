@@ -1,7 +1,24 @@
 import { CARDS_ACTION_TYPES } from "./ActionTypes";
 
 const initialState = {
-  allCards: [],
+  allCards: [
+    {
+      id: 1,
+      name: "Mark Henry",
+      cardNumber: "1023 4507 8545 2020",
+      thru: "12/20",
+      cvv: "820",
+      freeze: false,
+    },
+    {
+      id: 2,
+      name: "Tim Cook",
+      cardNumber: "9099 4507 3545 2021",
+      thru: "12/28",
+      cvv: "312",
+      freeze: true,
+    },
+  ],
   currentCardId: null,
 };
 

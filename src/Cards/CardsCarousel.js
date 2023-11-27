@@ -27,12 +27,11 @@ function CardsCarousel(props) {
     slidesToScroll: 1,
     arrows: true,
   };
-  console.log("Card Carousel rendered");
   const fetchCardsData = async (userId) => {
     try {
       //This is our Mock API
       const data = await fetchUserCards(userId);
-      //Dispatch action to store API data in redux
+      //Dispatch action to store API data in redux(This is redundant,but elucidating the architecture)
       dispatch(storeCardsData(data));
     } catch (error) {
       console.error("Error fetching data:", error);
