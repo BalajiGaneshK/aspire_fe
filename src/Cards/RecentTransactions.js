@@ -96,7 +96,16 @@ function RecentTransactions() {
                     </div>
                   </div>
                   <div className="cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__value">
-                    <div className="cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__value__text">
+                    <div
+                      style={
+                        transaction.type === "debit"
+                          ? { color: "#222222" }
+                          : { color: "#01D167" }
+                      }
+                      className={
+                        "cards__dashboard__content__mydebitcards__rightcontainer__recenttransactionslist__transaction__value__text"
+                      }
+                    >
                       {transaction.type === "debit"
                         ? `-S$ ${transaction.value}`
                         : `+S$ ${transaction.value}`}

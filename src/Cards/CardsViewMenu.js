@@ -19,10 +19,14 @@ function CardsViewMenu() {
     action: null,
   });
   let currentCardId = useSelector(cardsSelector.getCurrentCardId);
+  let currentCardDetails = useSelector(cardsSelector.getCurrentCardDetails);
+  console.log("currentCard:", currentCardDetails);
   const handleToggleFreeze = () => {
     setModalSettings({
       isModalOpen: true,
-      message: "Are you sure you want to Freeze this Card?",
+      message: `Are you sure you want to ${
+        currentCardDetails[0].freeze ? "Release" : "Freeze"
+      } this Card?`,
       action: () => {
         dispatch(toggleFreeze(currentCardId));
       },
@@ -48,7 +52,7 @@ function CardsViewMenu() {
       <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu">
         <div
           className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem"
-          style={{ marginLeft: 0 }}
+          style={{ marginLeft: 0, width: "41px", marginRight: "1px" }}
           onClick={() => {
             if (currentCardId !== null) handleToggleFreeze();
           }}
@@ -60,21 +64,27 @@ function CardsViewMenu() {
             className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem__menuname"
             style={{ marginLeft: "-7px" }}
           >
-            Freeze Card
+            {currentCardDetails[0]?.freeze ? "Release Card" : "Freeze Card"}
           </div>
         </div>
-        <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem">
+        <div
+          // style={{ width: "44px" }}
+          className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem"
+        >
           <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem__icon">
             <img src={Set_Spend_Limit_Icon} alt="Freeze_Card_Icon"></img>
           </div>
           <div
             className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem__menuname"
-            style={{ marginLeft: "-19px" }}
+            style={{ marginLeft: "-17px" }}
           >
             Set Spend Limit
           </div>
         </div>
-        <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem">
+        <div
+          // style={{ width: "32px" }}
+          className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem"
+        >
           <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem__icon">
             <img src={Gpay_Icon} alt="Freeze_Card_Icon"></img>
           </div>
@@ -85,7 +95,10 @@ function CardsViewMenu() {
             Add to GPay
           </div>
         </div>
-        <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem">
+        <div
+          // style={{ width: "50px" }}
+          className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem"
+        >
           <div className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem__icon">
             <img src={Replace_Card_Icon} alt="Freeze_Card_Icon"></img>
           </div>
@@ -97,6 +110,7 @@ function CardsViewMenu() {
           </div>
         </div>
         <div
+          // style={{ width: "53px" }}
           className="cards__dashboard__content__mydebitcards__leftcontainer__cardsviewmenu_menuitem"
           onClick={() => {
             if (currentCardId !== null) handleCancelCard();
