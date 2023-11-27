@@ -52,23 +52,28 @@ $menu-name-font-size: 16px;
       text-align: left;
       margin-bottom: 62px;
       cursor: pointer;
+      .menu-name {
+        margin-left: 16px;
+        vertical-align: top;
+        height: 24px;
+        font-family: $menu-name-font-family;
+        color: $menu-name-font-color;
+        font-size: $menu-name-font-size;
+        font-weight: 400;
+        text-decoration: none;
+
+        &:hover {
+          color: $menu-name-font-color-hover;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
     }
     .menu-icon {
       width: 24px;
       height: 24px;
-    }
-
-    .menu-name {
-      margin-left: 16px;
-      vertical-align: top;
-      height: 24px;
-      font-family: $menu-name-font-family;
-      color: $menu-name-font-color;
-      font-size: $menu-name-font-size;
-      font-weight: 400;
-      &:hover {
-        color: $menu-name-font-color-hover;
-      }
     }
   }
 }

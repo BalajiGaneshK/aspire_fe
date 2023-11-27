@@ -26,7 +26,7 @@ function Menu() {
         <li>
           <Link to={"/"}>
             <img src={Home_Icon} alt="Home_Icon" className="menu-icon" />
-            <span className="menu-name inline">Home</span>
+            <span className="menu-name">Home</span>
           </Link>
         </li>
         <li>
